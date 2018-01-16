@@ -17,6 +17,6 @@ class String
   end
 
   def count_sentences
-self.split(/\.|\?|\!/).delete_if {|w| w.length < 2}.length 
+self.split(/\.|\?|\!/).reject! {|w| w.length < 2}.length 
   end
 end
